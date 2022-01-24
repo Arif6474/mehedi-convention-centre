@@ -1,0 +1,119 @@
+(function ($) {
+
+    //Banner Heading
+    if ($(window).width() > 800) {
+        $('.featured-heading').appendTo('.pageBanner').wrap('<div class="container" />');
+    }
+    //Fancybox Gallery
+    $('.wp-block-gallery').each(function (i) {
+        //Group the images
+        $(this).find('figure > a').attr('data-fancybox', 'fancy-gallery' + (i + 1));
+        //Add captions
+        $(this).find('figure > a').each(function (i) {
+            var caption = $(this).find('figcaption').text();
+            $(this).find('figure > a').attr('data-caption', caption);
+        });
+    });
+    //add placeholders for 3 column
+    $('.wp-block-gallery.columns-3').each(function (i) {
+        var galleryItems = $(this).find('.blocks-gallery-item').length; // find number of gallery items
+        var placeholders = 3 - galleryItems % 3; // take number of columns and subtract remainder
+        if (placeholders < 3) { // only add placeholders if needed
+            for (index = 0; index < placeholders; index++) {
+                $(this).append('<span class="blocks-gallery-item"/>');
+            }
+        }
+    });
+    //add placeholders for 4 column
+    $('.wp-block-gallery.columns-4').each(function (i) {
+        var galleryItems = $(this).find('.blocks-gallery-item').length; // find number of gallery items
+        var placeholders = 4 - galleryItems % 4; // take number of columns and subtract remainder
+        if (placeholders < 4) { // only add placeholders if needed
+            for (index = 0; index < placeholders; index++) {
+                $(this).append('<span class="blocks-gallery-item"/>');
+            }
+        }
+    });
+    //add placeholders for 5 column
+    $('.wp-block-gallery.columns-5').each(function (i) {
+        var galleryItems = $(this).find('.blocks-gallery-item').length;
+        var placeholders = 5 - galleryItems % 5;
+        if (placeholders < 5) {
+            for (index = 0; index < placeholders; index++) {
+                $(this).append('<span class="blocks-gallery-item"/>');
+            }
+        }
+    });
+    //add placeholders for 6 column
+    $('.wp-block-gallery.columns-6').each(function (i) {
+        var galleryItems = $(this).find('.blocks-gallery-item').length;
+        var placeholders = 6 - galleryItems % 6;
+        if (placeholders < 6) {
+            for (index = 0; index < placeholders; index++) {
+                $(this).append('<span class="blocks-gallery-item"/>');
+            }
+        }
+    });
+
+    //Animations
+    var fadeInUp = 'animated fadeInUp fast visible';
+    //General content in view
+    $('.entry-content > *').not('.wp-block-gallery, .wp-block-columns').addClass("hidden").viewportChecker({
+        classToAdd: fadeInUp,
+        offset: 25
+    });
+    //gallery and columns by blocks
+    $(".blocks-gallery-item, .wp-block-column").each(function (i) {
+        $(this).addClass("hidden").viewportChecker({
+            classToAdd: fadeInUp,
+            offset: 25
+        });
+    });
+
+    //Table Scrolls
+    $('.wp-block-table').wrap('<div class="wp-block-table-scrollbox" />');
+
+    //FAQ
+    $('.schema-faq-question').click(function () {
+        $(this).stop().toggleClass('schema-faq-question-open').next('.schema-faq-answer').stop().slideToggle();
+    });
+
+    //looping classes
+    var color = ['color1', 'color2', 'color3', 'color4']; //add more classes here as needed
+    var counter = 0;
+    var counter2 = 0;
+    var counter3 = 0;
+    $('#primary-menu > li').each(function (i, el) {
+        $(this).addClass(color[counter]);
+        if (counter < color.length - 1) {
+            counter++;
+        } else {
+            counter = 0;
+        }
+    });
+    $('.callout-button').each(function (i, el) {
+        $(this).addClass(color[counter2]);
+        if (counter2 < color.length - 1) {
+            counter2++;
+        } else {
+            counter2 = 0;
+        }
+    });
+    $('.schema-faq-section').each(function (i, el) {
+        $(this).addClass(color[counter3]);
+        if (counter3 < color.length - 1) {
+            counter3++;
+        } else {
+            counter3 = 0;
+        }
+    });
+    
+    //Add container into full width sections
+    $('.alignfull.contained').each(function () {
+        $(this).wrapInner('<div class="container" />');
+    });
+
+    //Target Blank Helper
+    $('.target-blank > a, a.target-blank').attr('target', '_blank');
+
+})(jQuery);

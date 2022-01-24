@@ -1,0 +1,22 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * neuzeit-grotesk-extra-conden:
+ *   - http://typekit.com/eulas/0000000000000000000178aa
+ *
+ * © 2009-2022 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2021-08-09 16:26:10 UTC"}*/
+
+@import url("https://p.typekit.net/p.css?s=1&k=wxt7vma&ht=tk&f=11315&a=82949101&app=typekit&e=css");
+
+@font-face {
+font-family:"neuzeit-grotesk-extra-conden";
+src:url("https://use.typekit.net/af/8e617a/0000000000000000000178aa/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("woff2"),url("https://use.typekit.net/af/8e617a/0000000000000000000178aa/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("woff"),url("https://use.typekit.net/af/8e617a/0000000000000000000178aa/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:900;
+}
+
+.tk-neuzeit-grotesk-extra-conden { font-family: "neuzeit-grotesk-extra-conden",sans-serif; }
