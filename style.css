@@ -1,0 +1,64 @@
+
+.nav-bg{
+    background-color: lightpink;
+}
+
+.btn-bg{
+    background-color: #dd0950;
+    color: lightyellow;
+}
+
+.description{
+    color: rgb(93, 202, 175);
+}
+
+
+
+.price-color{
+    color: rgb(134, 21, 168);
+}
+
+
+
+
+.price1{
+    color: rgb(129, 45, 6);
+}
+.price-des{
+    color: rgb(22, 65, 65);
+
+}
+
+.price2{
+    color: rgb(231, 252, 255);
+}
+.btn-price{
+    background-color: rgb(35, 8, 100);
+    color: rgb(246, 252, 253);
+}
+.btn-prime{
+    background-color: rgb(67, 145, 4);
+    color: rgb(251, 252, 208); 
+}
+.bg-price{
+    background-color: rgb(45, 202, 116);
+
+}
+
+.price3{
+    color: navy;
+    font-size: 15px;
+}
+
+
+
+.bg-change{
+    background-color: #dd2909;
+    
+}
+.bg-changes {
+    background-color: #1c1ce4;
+}
+.bg-changed {
+    background-color: #cf40cb;
+}
