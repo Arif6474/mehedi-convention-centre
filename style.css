@@ -1,26 +1,30 @@
-
+/* navigation */
 .nav-bg{
     background-color: lightpink;
 }
-
+.navText{
+    color: rgb(245, 8, 8);
+    font-size: 18px;
+}
 .btn-bg{
     background-color: #dd0950;
     color: lightyellow;
 }
 
+/* slider */
+
 .description{
     color: rgb(93, 202, 175);
 }
 
-
+.title-des{
+    font-size: 12px;
+}
 
 .price-color{
     color: rgb(134, 21, 168);
 }
-
-
-
-
+/* price list */
 .price1{
     color: rgb(129, 45, 6);
 }
